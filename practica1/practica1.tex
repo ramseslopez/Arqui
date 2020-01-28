@@ -1,0 +1,506 @@
+\documentclass[12pt, letterpaper]{article}
+  \usepackage[utf8]{inputenc}
+  \usepackage[left = 2.5cm, right = 2.5cm, top = 3cm, bottom = 3cm]{geometry}
+  \usepackage[T1]{fontenc}
+  \usepackage{amsthm}
+  \usepackage{amsfonts}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{graphicx}
+  
+
+  \author{Hernández Ferreiro Enrique Ehécatl \\
+          López Soto Ramses Antonio}
+
+        \title{Práctica 1: Medidas de desempeño \\
+                {\small Organización y Arquitectura de Computadoras}}
+
+                \date{17 de febrero de 2019}
+
+        \begin{document}
+        \maketitle
+
+        \section{Introducción}
+
+                \hspace{.5cm}
+                A lo largo de los años, las computadoras han ido evolucionando
+                y han presentado mejoras extraordinarias: mejor tarjeta gráfica,
+                la memoria RAM, un procesador más potente o la capacidad del 
+                disco duro, pero ¿cómo podemos determinar si una computadora es 
+                realmente eficaz?\vspace{.3cm}
+
+                Existen varios factores que nos pueden ayudar para la elección 
+                de un buen equipo de cómputo pero primero tenemos que determinar 
+                cuáles son nuestras necesidades y así optar por la computadora 
+                que más nos convenga.\vspace{.3cm}
+
+                En nuestra área de estudio que son las Ciencias de la Computación
+                nos interesa tener una buena computadora, ya que es indispensable 
+                un funcionamiento óptimo para nuestra herramienta de trabajo.\vspace{.3cm}
+
+                La manera idónea para tener la certeza de que una computadora tiene
+                un buen desempeño es mediante el \textit{tiempo de respuesta} 
+                (más bajo mejor) y el \textit{redimiento} (más alto mejor), para 
+                que con esos dos factores importantes estemos completamente 
+                convencidos de que estemos adquiriendo una computadora apropiada.\vspace{.3cm}
+
+        \section{Desarrollo}
+
+                \hspace{.5cm}
+                Los resutados resultados reflejados a lo largo de la siguiente 
+                práctica nos darán la respuesta a: ¿cuál computadora es mejor?
+
+                \subsection{Computadoras}
+
+                        \hspace{.5cm}
+                        La especificación de cada ua de las cuatro computadoras 
+                        son:
+
+                        \subsubsection*{Computadora A}
+
+                                \begin{table}[htb]
+                                        \centering
+                                        \begin{tabular}{|l|l|}
+                                        \hline
+                                                \multicolumn{1}{|c|}{Nicole Romina Traschicoff García} \\ 
+                                                \hline \hline
+                                                Lenovo 20ARS0FJ0A (GJET92WW 2.42 BIOS)  \\
+                                                Intel Core i5-4300u @ 2.90GHz (2 Core/ 4 Threads) \\ 
+                                                8193MB \\ 
+                                                3072KB \\
+                                                128GB TOSHIBA THNSNH12 \\
+                                                Fedora $28$ \\ 
+                                                $4.18.18-200.fc28.x86\_64(x86\_64)$ \\ 
+                                                \hline
+                                        \end{tabular}
+                                        \caption{Especificaiones de la computadora A.}
+                                \end{table}
+
+                        \subsubsection*{Computadora B}
+
+                                \begin{table}[htb]
+                                        \centering
+                                        \begin{tabular}{|l|l|}
+                                        \hline
+                                                \multicolumn{1}{|c|}{Ramses Antonio López Soto} \\ 
+                                                \hline \hline
+                                                HP 82A9 v04.20 (F.10 BIOS)  \\
+                                                Intel Celeron N3050 @ 2.16GHz (2 Cores) \\ 
+                                                4096MB \\ 
+                                                1024KB \\
+                                                31 GB DF4032 \\
+                                                Debian $9.5$ \\ 
+                                                $4.9.0-7$-amd$64$ $(x86\_64)$ \\ 
+                                                \hline
+                                        \end{tabular}
+                                        \caption{Especificaiones de la computadora B.}
+                                \end{table}
+
+                        \subsubsection*{Computadora C}
+
+                                \begin{table}[htb]
+                                        \centering
+                                        \begin{tabular}{|l|l|}
+                                        \hline
+                                                \multicolumn{1}{|c|}{Erik Quintero Villeda} \\ 
+                                                \hline \hline
+                                                HP 832C v25.20  \\
+                                                Intel Celeron N3060 @ 2.48GHz (2 Cores) \\ 
+                                                4096 MB \\ 
+                                                1000GB TOSHIBA MQ01ABD1 \\
+                                                Ubuntu $16.04$ \\ 
+                                                $4.15.0-42$-generic$(x86\_64)$ \\ 
+                                                \hline
+                                        \end{tabular}
+                                        \caption{Especificaiones de la computadora C.}
+                                \end{table}\vspace{2cm}
+
+                        \subsubsection*{Computadora D}
+
+                                \begin{table}[htb]
+                                        \centering
+                                        \begin{tabular}{|l|l|}
+                                        \hline
+                                                \multicolumn{1}{|c|}{Enrique Ehécatl Hernández Ferreiro} \\ 
+                                                \hline \hline
+                                                Sony VAIO (R1011w7 BIOS)  \\
+                                                Intel Core i3 370M @ 40GHz (2 Cores/ 4 Threads) \\ 
+                                                6144MB \\ 
+                                                3072KB \\
+                                                500GB Western Digital WD5000AAKS-5 \\
+                                                Fedora $29$ \\ 
+                                                $4.18.16-300.fc29.x86\_64(x86\_64)$ \\ 
+                                                \hline
+                                        \end{tabular}
+                                        \caption{Especificaiones de la computadora D.}
+                                \end{table}
+
+                \subsection{Pruebas}
+
+                        \hspace{.5cm}
+                        Se utilizaron cuatro computadora diferentes para la
+                        ejecución de las siguientes pruebas del programa 
+                        \textit{Phoronix Test Suite}:\vspace{.3cm}
+
+                        \begin{itemize}
+                                \item \textbf{GZIP Compression}\vspace{.05cm}
+                        
+                                        Esta prueba mide el tiempo necesario 
+                                        para comprimir un archivo usando GZIP.
+                                        
+                                \item \textbf{DCRAW}\vspace{.05cm}
+                                
+                                        Esta prueba mide el tiempo que toma 
+                                        convertir varias imagenes de alta 
+                                        resolución en formato RAW NEF a 
+                                        imagenes en formato PPM usando dcraw.
+                                
+                                \item \textbf{FLAC Audio Encoding}\vspace{.05cm}
+                
+                                        Esta prueba mide cuanto tiempo toma 
+                                        codificar un archivo muestra de audio 
+                                        en formato WAV a un archivo en formato FLAC.
+
+                                \item \textbf{GnuPG}\vspace{.05cm}
+                                
+                                        Esta prueba mide el tiempo que toma 
+                                        encriptar un archivo usando GnuPG.
+
+                                \item \textbf{REDIS}\vspace{.05cm}
+                                
+                                        Redis es un motor de bases de datos 
+                                        en memoria de código abierto, la 
+                                        prueba mide el número de solicitudes 
+                                        que el servidor puede responder por 
+                                        segundo.
+                                
+                                \item \textbf{Timed MAFFT Alignment}\vspace{.05cm}
+                                
+                                        Esta prueba mide el tiempo que le 
+                                        toma alinear 100 secuencias de piruvato
+                                        descarboxilasa.
+
+                                \item \textbf{Timed MrBayes Analysis}\vspace{.05cm}
+                                
+                                        Esta prueba mide el tiempo que le 
+                                        toma realiza un analisis bayesiano 
+                                        de un conjunto de secuencias del 
+                                        genoma de primates con el fin de 
+                                        estimar su filogenia.
+
+                                \item \textbf{Timed MPlayer Compilation}\vspace{.05cm}
+                                
+                                        Esta prueba mide el tiempo que 
+                                        toma compilar el reproductor MPlayer.
+                                
+                                \item \textbf{Timed PHP Compilation}\vspace{.05cm}
+                                
+                                        Esta prueba mide el tiempo que 
+                                        toma complilar PHP 5.
+
+                        \end{itemize}
+
+                        A continuación se muestra la clasificación de las pruebas:
+
+                        \begin{table}[htb]
+                                \centering
+                                \begin{tabular}{|l|l|}
+                                \hline
+                                        \multicolumn{2}{|c|}{\textbf{Pruebas}} \\ 
+                                        \hline \hline
+                                        \hspace{0.2cm} \textbf{Tiempo de respuesta (seg)} & \textbf{Rendimiento (tar/seg)} \\ \hline     
+                                        \hspace{1.7cm}           DCRAW           & \\ 
+                                        \hspace{.3cm}     FLAC Audio Encoding    &   \\ 
+                                        \hspace{.1cm}    Timed MAFFT Alignment   & \\
+                                        \hspace{.9cm}      Gzip Compression      & \hspace{1.3cm} REDIS \\ 
+                                        \hspace{2cm}            GnuPG            & \\ 
+                                        \hspace{0cm}  Timed MPlayer Compilation  &  \\
+                                        \hspace{.2cm}   Timed PHP Compilation    &  \\
+                                        \hspace{.2cm}  Timed MrBayes Analysis    & \\
+                                        \hline
+                                \end{tabular}
+                                \caption{Clasificación de las pruebas.}
+                        \end{table}
+
+                \subsection{Resultados}
+
+                        \hspace{.5cm}
+                        Los resultados después de ejecutar las pruebas en las cuatro computadoras
+                        son los siguientes:\newpage
+
+                        \begin{table}[t]
+                                \centering
+                                \begin{tabular}{|l|l|l|l|l|}
+                                \hline
+                                                                 & \hspace{.5cm} \textbf{A} & \hspace{.3cm} \textbf{B} & \hspace{.6cm} \textbf{C} & \hspace{.3cm} \textbf{D} \\ \hline     
+                                        \hspace{1.6cm} DCRAW & 65.04 & 238 & 208.74 & 118 \\ \hline
+                                        \hspace{.3cm} FLAC Audio Encoding & 14.00 & 52.45 & 46.73 & 30.12 \\ \hline
+                                        \hspace{.1cm} Timed MAFFT Alignment & 10.63 & 30.46 & 29.62 & 3.37 \\ \hline
+                                        \hspace{.9cm} Gzip Compression & 56.06 & 112 & 212.82 & 316 \\ \hline
+                                        \hspace{2cm} GnuPG & 18.67 & 52.98 & 73.93 & 46.80 \\ \hline
+                                        \hspace{0cm} Timed MPlayer Compilation & 3.00 & 582 & 360.73 & 204 \\ \hline
+                                        \hspace{.2cm} Timed MrBayes Analysis & 1215 & 3770 & 894 & 894\\ \hline
+                                        \hspace{.2cm} Timed PHP Compilation & 257 & 1296 & 285.71 & 258.71 \\ \hline \hline
+                                        \multicolumn{5}{|c|}{REDIS} \\ \hline
+                                        \hspace{1.8cm} LPOP & 1688502  & 498343 & 503128.69 & 573862 \\ \hline
+                                        \hspace{1.7cm} LPUSH & 1125333 & 288828 & 315109.52 & 335463 \\ \hline
+                                        \hspace{1.8cm} SADD & 1342621  & 384914 & 396636.02 & 463321 \\ \hline
+                                        \hspace{2cm} GET & 1588350 & 465320 & 496304.30 & 494175 \\ \hline
+                                        \hspace{2cm} SET & 1127493 & 339528 & 356498.02 & 537825 \\ 
+                                        \hline
+                                \end{tabular}
+                                \caption{Resultados de las pruebas.}
+                        \end{table}
+
+                        \hspace{.5cm}
+                        En las páginas siguientes se mostrarán l calculo de las 
+                        medidas de tendencia central correspondientes:
+                        
+                        \begin{center}
+                                \framebox{Medidas de tendencia central}
+                        \end{center}
+
+                        $$D=\{\delta_1, \delta_2, ..., \delta_n\}$$
+
+                        \begin{center}
+                                Media aritmética   \hspace{2cm}   $A(D)=\frac{1}{n}\displaystyle\sum_{i=1}^{n}\delta_{i}$
+                        \end{center}
+
+                        \begin{center}
+                                Media armónica   \hspace{2cm}   $H(D)=\frac{n}{\displaystyle\sum_{i=1}^{n}\frac{1}{\delta_{i}}}$
+                        \end{center}
+
+                        \begin{center}
+                                Media geométrica   \hspace{2cm}   $G(D)=\sqrt[n]{\displaystyle\prod_{i=0}^{n}\delta_{i}}$
+                        \end{center}
+
+                        \begin{center}
+                                $H(D) \leq G(D) \leq A(D)$
+                        \end{center}
+
+                        \begin{table}[htb]
+                                \centering
+                                \begin{tabular}{|l|l|l|l|l|}
+                                \hline
+                                        \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ 
+                                        \hline \hline
+                                        & A & B & C & D \\ \hline
+                                        Media Aritmética & 204.925 & 766.73625 & 264.035 & 233.875 \\ \hline
+                                        Media armónica & 13.5518701996602 & 92.3189618491253 & 93.493940678668 & 21.4575610700811 \\ \hline
+                                        Media Geométrica  & 41.8946664925923 & 224.339866811314 & 159.49905347671 & 97.7822641629773 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas (tiempo de respuesta).}
+                        \end{table}
+
+                        \begin{table}[htb]
+                                \centering
+                                \begin{tabular}{|l|l|l|l|l|}
+                                \hline
+                                        \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ 
+                                        \hline \hline
+                                        & A & B & C & D \\ \hline
+                                        Media Aritmética & 1374459.8 & 395386.6 & 413535.31 & 480929.2 \\ \hline
+                                        Media armónica & 1336117.35942796 & 379903.84433356 & 399928.857248319 & 464477.665553791 \\ \hline
+                                        Media Geométrica  & 1355062.18636881 & 387642.812132422 & 406693.830012477 & 473119.847489593 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas (rendimiento).}
+                        \end{table}
+
+                        \begin{table}[t]
+                                \centering
+                                \begin{tabular}{|l|l|l|l|l|}
+                                \hline
+                                                                 & \hspace{.5cm} \textbf{A} & \hspace{.3cm} \textbf{B} & \hspace{.6cm} \textbf{C} & \hspace{.3cm} \textbf{D} \\ \hline     
+                                        \hspace{1.6cm} DCRAW & 1 & 3.65928659286593 & 3.20940959409594 & 1.81426814268143 \\ \hline
+                                        \hspace{.3cm} FLAC Audio Encoding & 1 & 3.74642857142857 & 3.33785714285714 & 2.15142857142857 \\ \hline
+                                        \hspace{.1cm} Timed MAFFT Alignment & 1 & 2.86547507055503 & 2.78645343367827 & 0.317027281279398 \\ \hline
+                                        \hspace{.9cm} Gzip Compression & 1 & 1.99785943631823 & 3.79628968961827 & 5.63681769532644 \\ \hline
+                                        \hspace{2cm} GnuPG & 1 & 2.83770755222282 & 3.95982860203535 & 2.50669523299411 \\ \hline
+                                        \hspace{0cm} Timed MPlayer Compilation & 1 & 194 & 120.243333333333 & 68 \\ \hline
+                                        \hspace{.2cm} Timed MrBayes Analysis & 1 & 3.10288065843621 & 0.735802469135802 & 0.735802469135802 \\ \hline
+                                        \hspace{.2cm} Timed PHP Compilation & 1 & 5.04280155642023 & 1.11171206225681 & 1.00665369649805 \\ \hline \hline
+                                        \multicolumn{5}{|c|}{REDIS} \\ \hline
+                                        \hspace{1.8cm} LPOP & 1  & 0.295139123317592 & 0.297973404828659 & 0.339864566343422 \\ \hline
+                                        \hspace{1.7cm} LPUSH & 1 & 0.256660028631525 & 0.28001446682893 & 0.298101095409092 \\ \hline
+                                        \hspace{1.8cm} SADD & 1  & 0.286688499584023 & 0.29541919871654 & 0.345086960504863 \\ \hline
+                                        \hspace{2cm} GET & 1 & 0.292958101174174 & 0.312465325652407 & 0.311124752101237 \\ \hline
+                                        \hspace{2cm} SET & 1 & 0.30113535072945 & 0.316186459694207 & 0.477009613363453 \\ 
+                                        \hline
+                                \end{tabular}
+                                \caption{Resultados de las pruebas normalizado a A.}
+                        \end{table}
+
+                        \begin{table}[htb]
+                                \centering
+                                \begin{tabular}{|l|l|l|l|l|}
+                                \hline
+                                        \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ 
+                                        \hline \hline
+                                        & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                        Media Aritmética & 1 & 27.1565549297809 & 17.3975857908764 & 10.271086636168 \\ \hline
+                                        Media armónica & 1 & 3.52756770718895 & 2.13168598157316 & 1.12457638213961 \\ \hline
+                                        Media Geométrica  & 1 & 5.35485505896034 & 3.80714460407299 & 2.33400268695937 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a A (tiempo de respuesta).}
+                        \end{table}
+
+                        \begin{table}[htb]
+                                \centering
+                                \begin{tabular}{|l|l|l|l|l|}
+                                \hline
+                                        \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ 
+                                        \hline \hline
+                                        & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                        Media Aritmética & 1 & 0.286516220687353 & 0.300411771144148 & 0.354237397544413 \\ \hline
+                                        Media armónica & 1 & 0.285603846933205 & 0.299844419807424 & 0.344702207809541 \\ \hline
+                                        Media Geométrica  & 1 & 0.28607012728412 & 0.300129273847058 & 0.349149915220809 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a A (rendimiento).}
+                        \end{table}
+
+                        \begin{table}[htbp]
+                                
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                 & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                DCRAW & 1 & 3.65928659286593 & 3.20940959409594 & 1.81426814268143 \\ \hline
+                                FLAC Audio Encoding & 1 & 3.74642857142857 & 3.33785714285714 & 2.15142857142857 \\ \hline
+                                Timed MAFFT Alignment & 1 & 2.86547507055503 & 2.78645343367827 & 0.317027281279398 \\ \hline
+                                Gzip Compression & 1 & 1.99785943631823 & 3.79628968961827 & 5.63681769532644 \\ \hline
+                                GnuPG & 1 & 2.83770755222282 & 3.95982860203535 & 2.50669523299411 \\ \hline
+                                Timed Mplayer Compilation & 1 & 194 & 120.243333333333 & 68 \\ \hline
+                                TimedMrBayes Analysis & 1 & 3.10288065843621 & 0.735802469135802 & 0.735802469135802 \\ \hline
+                                Timed PHP Compilation & 1 & 5.04280155642023 & 1.11171206225681 & 1.00665369649805 \\ \hline
+                                REDIS & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+                                LPOP & 1 & 0.295139123317592 & 0.297973404828659 & 0.339864566343422 \\ \hline
+                                LPUSH & 1 & 0.256660028631525 & 0.28001446682893 & 0.298101095409092 \\ \hline
+                                SADD & 1 & 0.286688499584023 & 0.29541919871654 & 0.345086960504863 \\ \hline
+                                GET & 1 & 0.292958101174174 & 0.312465325652407 & 0.311124752101237 \\ \hline
+                                SET & 1 & 0.30113535072945 & 0.316186459694207 & 0.477009613363453 \\ \hline
+                                \end{tabular}
+                                \caption{Resultados de las pruebas normalizado a B.}
+                        \end{table}
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ \hline
+                                & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                Media Aritmética & 0.283481447560047 & 1 & 0.889179720140906 & 0.709093732143339 \\ \hline
+                                Media armónica & 0.036823522077293 & 1 & 0.536902143236591 & 0.303458042998811 \\ \hline
+                                Media Geométrica  & 0.186746417781503 & 1 & 0.710970616786808 & 0.435866640882065 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a B (tiempo de respuesta).}
+                        \end{table}
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ \hline
+                                & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                Media Aritmética & 3.501353398205 & 1 & 1.04952375457623 & 1.23255029398752 \\ \hline
+                                Media armónica & 3.49020379230537 & 1 & 1.04876811646017 & 1.20975591769805 \\ \hline
+                                Media Geométrica  & 3.49564636298713 & 1 & 1.04914580454944 & 1.22050463127889 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a B (rendimiento).}
+                        \end{table}
+                                
+                                
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                        & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                DCRAW & 0.311583788444955 & 1.140174379611 & 1 & 0.565296541151672 \\ \hline
+                                FLAC Audio Encoding & 0.299593408945003 & 1.12240530708324 & 1 & 0.644553819815964 \\ \hline
+                                Timed MAFFT Alignment & 0.358879135719109 & 1.02835921674544 & 1 & 0.113774476704929 \\ \hline
+                                Gzip Compression & 0.263415092566488 & 0.526266328352598 & 1 & 1.48482285499483 \\ \hline
+                                GnuPG & 0.252536182875693 & 0.716623833355877 & 1 & 0.633031245773029 \\ \hline
+                                Timed Mplayer Compilation & 0.008316469381532 & 1.61339506001719 & 1 & 0.565519917944169 \\ \hline
+                                TimedMrBayes Analysis & 1.35906040268456 & 4.21700223713647 & 1 & 1 \\ \hline
+                                Timed PHP Compilation & 0.899513492702391 & 4.53606804102062 & 1 & 0.905498582478737 \\ \hline
+                                REDIS & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \hline
+                                LPOP & 3.35600420639896 & 0.99048813932674 & 1 & 1.14058691425448 \\ \hline
+                                LPUSH & 3.57124405508282 & 0.916595601427719 & 1 & 1.0645917647934 \\ \hline
+                                SADD & 3.38502035190853 & 0.970446405750037 & 1 & 1.16812638448722 \\ \hline
+                                GET & 3.20035510472103 & 0.937569954562151 & 1 & 0.995709688592261 \\ \hline
+                                SET & 3.16269077735691 & 0.952397996488171 & 1 & 1.50863390489518 \\ \hline
+                                \end{tabular}
+                                \caption{Resultados de las pruebas normalizado a C.}
+                        \end{table}
+                                
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ \hline
+                                & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                Media Aritmética & 0.469112246664967 & 1.8625368004153 & 1 & 0.739062179857916 \\ \hline
+                                Media armónica & 0.057479239477262 & 1.12463203708867 & 1 & 0.438702522492151 \\ \hline
+                                Media Geométrica  & 0.262664044578231 & 1.40652788791673 & 1 & 0.613058585813209 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a C (tiempo de respuesta).}
+                        \end{table}
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ \hline
+                                & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                Media Aritmética & 3.33506289909365 & 0.953499619510964 & 1 & 1.17552973140451 \\ \hline
+                                Media armónica & 3.32876436962307 & 0.952813117034947 & 1 & 1.15225939851848 \\ \hline
+                                Media Geométrica  & 3.33189757594118 & 0.953156363647144 & 1 & 1.16333175616428 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a C (rendimiento).}
+                        \end{table}
+                                                
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                        & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                DCRAW & 0.551186440677966 & 2.01694915254237 & 1.76898305084746 & 1 \\ \hline
+                                FLAC Audio Encoding & 0.464807436918991 & 1.74136786188579 & 1.55146082337317 & 1 \\ \hline
+                                Timed MAFFT Alignment & 3.15430267062315 & 9.03857566765579 & 8.7893175074184 & 1 \\ \hline
+                                Gzip Compression & 0.177405063291139 & 0.354430379746835 & 0.673481012658228 & 1 \\ \hline
+                                GnuPG & 0.398931623931624 & 1.13205128205128 & 1.57970085470086 & 1 \\ \hline
+                                Timed Mplayer Compilation & 0.014705882352941 & 2.85294117647059 & 1.76828431372549 & 1 \\ \hline
+                                TimedMrBayes Analysis & 1.35906040268456 & 4.21700223713647 & 1 & 1 \\ \hline
+                                Timed PHP Compilation & 0.993390282555757 & 5.00947006300491 & 1.10436395964594 & 1 \\ \hline
+                                \multicolumn{ 4}{|l|}{REDIS} & \multicolumn{1}{l|}{} \\ \hline
+                                LPOP & 2.94234850887496 & 0.868402159404177 & 0.876741603381998 & 1 \\ \hline
+                                LPUSH & 3.35456667352286 & 0.860983178472738 & 0.939327198528601 & 1 \\ \hline
+                                SADD & 2.89782030169148 & 0.830771754356051 & 0.856071751550221 & 1 \\ \hline
+                                GET & 3.21414478676582 & 0.941609753629787 & 1.00430879749077 & 1 \\ \hline
+                                SET & 2.09639380839492 & 0.631298284758053 & 0.662851336401246 & 1 \\ \hline
+                                \end{tabular}
+                                \caption{Resultados de las pruebas normalizado a D.}
+                        \end{table}
+                                
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ \hline
+                                & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                Media Aritmética & 0.889223725379516 & 3.29534847756175 & 2.27944894029619 & 1 \\ \hline
+                                Media armónica & 0.097360682021575 & 1.41025079572676 & 1.35306612522406 & 1 \\ \hline
+                                Media Geométrica  & 0.686118926193265 & 1.44639620913957 & 1.24292111185365 & 1 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a D (tiempo de respuesta).}
+                        \end{table}
+
+                        \begin{table}[htbp]
+                                \begin{tabular}{|l|r|r|r|r|}
+                                \hline
+                                \multicolumn{5}{|c|}{\textbf{Pruebas}} \\ \hline
+                                & \multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{B} & \multicolumn{1}{l|}{C} & \multicolumn{1}{l|}{D} \\ \hline
+                                Media Aritmética & 2.90105481585001 & 0.826613026124161 & 0.867860137470567 & 1 \\ \hline
+                                Media armónica & 2.82296563528311 & 0.811325919013678 & 0.850680313125907 & 1 \\ \hline
+                                Media Geométrica  & 1.42013409109291 & 0.935736397779231 & 0.950821088558151 & 1 \\ \hline
+                                \end{tabular}
+                                \caption{Medidas de tendencia central de las pruebas normalizado a D (rendimiento).}
+                        \end{table} 
+
+
+        \end{document}

@@ -1,0 +1,45 @@
+\documentclass[12pt, letterpaper]{article}
+  \usepackage[utf8]{inputenc}
+  \usepackage[left = 2.5cm, right = 2.5cm, top = 3cm, bottom = 3cm]{geometry}
+  \usepackage[T1]{fontenc}
+  \usepackage{graphicx}
+  \graphicspath{{images/}}
+  \usepackage{listings}
+
+  \author{Hernández Ferreiro Enrique Ehécatl \\
+          López Soto Ramses Antonio}
+
+        \title{Práctica 7: Convenciones de llamada a subrutina \\
+                {\small Organización y Arquitectura de Computadoras}}
+                \date{14 de abril de 2019}
+
+  \begin{document}
+  \maketitle
+  \section{Desarrollo}
+  El ejercicio 1 se muestra a continuación:\vspace{.1cm}
+
+  \lstinputlisting{practica7.asm}\vspace{.3cm}
+
+  El ejercicio 2 se muestra a continuación:\vspace{.1cm}
+
+  \lstinputlisting{combinatoria.asm}\vspace{.3cm}
+
+  \section{Conclusión}
+  \subsection{Preguntas}
+  \begin{itemize}
+      \item[1.] ¿Qué utilidad tiene el registro \$fp? ¿Se puede prescidir de él? \\
+                R. Sirve para preservar datos que no serán modificados por una llamada del sistema.
+                Y sí, se puede prescindir de él, pues puede ser decrementado una vez que el procedimiento
+                en el que se utilizó se acabe.
+      \item[2.] Definimos como \textbf{subrutina nodo} a una subrutina que realiza
+                una o más invocaciones a otras subrutinas y como \textbf{subrutina hoja}
+                a una subrutina que no realiza llamadas a otras subrutinas.
+                \begin{itemize}
+                    \item[a)]   ¿Cuál es el tamaño mínimo que puede tener un marco para
+                                una subrutina nodo? ¿Bajo qué condiciones ocurre?
+                    \item[]     ¿Cuál es el tamaño mínimo que puede tener un marco para
+                                una subrutina hoja? ¿Bajo qué condiciones ocurre?
+                \end{itemize}
+      \item[]
+  \end{itemize}
+  \end{document}

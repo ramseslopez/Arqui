@@ -1,0 +1,24 @@
+Arquitectura:          x86_64
+modo(s) de operación de las CPUs:32-bit, 64-bit
+Orden de los bytes:    Little Endian
+CPU(s):                2
+Lista de la(s) CPU(s) en línea:0,1
+Hilo(s) de procesamiento por núcleo:1
+Núcleo(s) por «socket»:2
+«Socket(s)»          1
+Modo(s) NUMA:          1
+ID de fabricante:      GenuineIntel
+Familia de CPU:        6
+Modelo:                76
+Nombre del modelo:     Intel(R) Celeron(R) CPU  N3050  @ 1.60GHz
+Revisión:             3
+CPU MHz:               2155.761
+CPU MHz máx.:         2160.0000
+CPU MHz mín.:         480.0000
+BogoMIPS:              3200.00
+Virtualización:       VT-x
+Caché L1d:            24K
+Caché L1i:            32K
+Caché L2:             1024K
+CPU(s) del nodo NUMA 0:0,1
+Indicadores:           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes rdrand lahf_lm 3dnowprefetch epb kaiser tpr_shadow vnmi flexpriority ept vpid tsc_adjust smep erms dtherm ida arat

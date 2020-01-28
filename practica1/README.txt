@@ -1,0 +1,2 @@
+Para visualizar la práctica primero hay que compilar el archivo practica1.tex y luego practica1_2.tex mediante el comando: pdflatex archivo.tex
+Puede que haya problemas con algunos paquetes que e encuentren de forma predeterminada.

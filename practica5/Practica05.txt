@@ -1,0 +1,15 @@
+Main: Un circuito Flip Flop D para ser usado mas adelante.
+
+Registro 8 bits: Usa 8 Flip Flop D (FF D) para almacenar un número de 8 bits.
+
+Banco de registros: Usa 4 registros de 8 bits para guardar diferentes valores en 4 pociones diferentes.
+
+Sumador, ALU (1 bit), ALU (8 bits): Circuitos auxiliares, circuitos de la practica 4.
+
+Banco + ALU: A y B entradas de 8 bits, Pin de entrada usado para indicar la opecación a realizar 0 para sumar 
+1 para restar, Doble pin marcar 11 para que realice sumas o restas, registro a escribir será lo que se guarde 
+en el banco de registros 00 para el primero operando 01 para el segundo operando 10 para guardar el de la suma y
+11 para guardar la resta. 
+
+Autómata: Pin de entrada para definir a que estado cambia el autómata, uso de Leds para indicar el estado del autómata
+Estados{ (00 = T), (01 = TE), (10 = NT), (11 = NTE) } Led apagado = 0, Led encendido = 1. 

@@ -1,0 +1,98 @@
+\documentclass[12pt, letterpaper]{article}
+  \usepackage[utf8]{inputenc}
+  \usepackage[left = 2.5cm, right = 2.5cm, top = 3cm, bottom = 3cm]{geometry}
+  \usepackage[T1]{fontenc}
+  \usepackage{graphicx}
+  \graphicspath{{images/}}
+  \usepackage{listings}
+
+  \author{Hernández Ferreiro Enrique Ehécatl \\
+          López Soto Ramses Antonio}
+
+        \title{Práctica 8: Excepciones \\
+                {\small Organización y Arquitectura de Computadoras}}
+                \date{9 de mayo de 2019}
+
+  \begin{document}
+    \maketitle
+    \section{Introducción}
+    Al ejecutar los programas que hacemos, es probable que se presenten casos en
+    los cuales el programa falle y se rompa. Para evitar que esto ocurra utilizamos
+    las llamadas \textit{excepiones}. \vspace{.1cm}
+
+    Las \textit{excepiones}, por ejemplo en \textit{Java}, son aquellas que nos
+    permiten que algún método le indique al código acerca de algún error que se
+    pueda ocasionar durante la ejecución del programa. Cuando un excepción es
+    lanzada la ejecución normal del programa y éste se altera.\vspace{.1cm}
+
+    En MIPS MARS sucede algo similar, son señales que son enviadas al procesador
+    por el hardware o el software que sucede al ocurrir un error por lo que el
+    flujo normal de las instrucciones se ve alterado. Las excepciones en MIPS MARS
+    se dividen de la siguiente manera:\vspace{.1cm}
+
+    \begin{item}
+      \item \underline{Excepciones internas} \vspace{.1cm}
+
+            Para comunicarse con el procesador pues los dispositivos de entrada
+            y salida ocasionan una \textit{interrupción}.
+
+      \item \underline{Excepciones externas} \vspace{.1cm}
+
+            Cuando ocurre un error o el procesador envía un mensaje al
+            dispositivo.
+
+    \end{item}\vspace{.1cm}
+
+
+
+    En la práctica se utilizarán las excepciones para evitar que ocurran errores
+    inesperados.\vspace{.3cm}
+
+    \section{Desarrollo}
+    En esta práctica se desarrolló una calculadora con notación postfija, es decir,
+    primero se encuentran los operandos y al final los operadores, lo implica que
+    la precedencia de operadores permanece sin la necesidad de separar las
+    operaciones haciendo uso de paréntesis.\vspace{.1cm}
+
+    \begin{table}
+      \centering
+      \begin{tabular}{ll}
+          Notación normal (infija) & Notación postfija \\ \hline
+               4 * 9                    & 4 9 *             \\
+            3 * 1 + 2                & 3 1 * 2 +         \\
+      \end{tabular}
+    \end{table}\vspace{.2cm}
+
+    \subsection*{Código}
+    El código que se usó para la implementación de la calculadora es el siguiente:\vspace{.2cm}
+
+    \lstinputlisting{practica8.asm}\vspace{.3cm}
+
+    \section{Conclusiones}
+    En esta práctica aprendimos el uso y funcionamiento básicos en MIPS MARS y
+    también nos divertimos un poco.
+
+    \subsection*{Preguntas}
+
+    \begin{item}
+      \item 1. En un procesador, ¿qué es el modo supervisor? ¿Qué funciones
+                tiene? ¿Cómo se implementa?
+
+                R. El modo supervisor es el que está permitido la ejecución de
+                  cualquier instrucción de máquina como: la autorización de
+                  interrupciones, el acceso a los registros utilizados por el
+                  hardware u operaciones de entrada y de salida.
+
+      \item 2. ¿Cuál es la relación entre una llamada al sistema y una excepción?
+
+                R. Ambas se ejecutan en el modo supervisor.
+
+      \item 3. ¿Qué es un vector de interrupciones?
+
+                R. Es un vector en el que se encuentran los valores que apuntan
+                   a la dirección en memoria del gestor de una interrupción. Es decir,
+                   gestiona correctamente las interrupciones que se solicitan al
+                   microprocesador.
+    \end{item}
+
+  \end{document}

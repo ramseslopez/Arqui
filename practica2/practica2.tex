@@ -1,0 +1,52 @@
+\documentclass[12pt, letterpaper]{article}
+  \usepackage[utf8]{inputenc}
+  \usepackage[left = 2.5cm, right = 2.5cm, top = 3cm, bottom = 3cm]{geometry}
+  \usepackage[T1]{fontenc}
+  \usepackage{listings}
+
+
+  \author{Hernández Ferreiro Enrique Ehécatl \\
+          López Soto Ramses Antonio}
+
+        \title{Práctica 2: Introducción a C \\
+                {\small Organización y Arquitectura de Computadoras}}
+
+                \date{27 de febrero de 2019}
+
+  \begin{document}
+    \maketitle
+    \section{Introducción}
+    Se desarrolló un pequño programa en el lenguaje de programación en C para
+    poder calcular las medidas de tendencia central de un conjunto de datos dados
+    por el usuario.
+    \section{Desarrollo}
+    Se implementaron en total tres métodos con los cuales se calcula:
+    \begin{center}
+            \framebox{Medidas de tendencia central}
+    \end{center}
+
+    $$D=\{\delta_1, \delta_2, ..., \delta_n\}$$
+
+    \begin{center}
+            Media aritmética   \hspace{2cm}   $A(D)=\frac{1}{n}\displaystyle\sum_{i=1}^{n}\delta_{i}$
+    \end{center}
+
+    \begin{center}
+            Media armónica   \hspace{2cm}   $H(D)=\frac{n}{\displaystyle\sum_{i=1}^{n}\frac{1}{\delta_{i}}}$
+    \end{center}
+
+    \begin{center}
+            Media geométrica   \hspace{2cm}   $G(D)=\sqrt[n]{\displaystyle\prod_{i=0}^{n}\delta_{i}}$
+    \end{center}
+
+    \begin{center}
+            $H(D) \leq G(D) \leq A(D)$
+    \end{center}
+
+    En código de C se implementó de la mejor siguiente forma:
+
+    \lstinputlisting{practica2.c}
+    \section{Conclusión}
+    Al implementar estas funciones sencillas en C, adquirimos conocimientos básicos
+    del lenguaje, en particular el uso de apuntadores.
+  \end{document}

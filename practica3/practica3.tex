@@ -1,0 +1,190 @@
+\documentclass[12pt, letterpaper]{article}
+  \usepackage[utf8]{inputenc}
+  \usepackage[left = 2.5cm, right = 2.5cm, top = 3cm, bottom = 3cm]{geometry}
+  \usepackage[T1]{fontenc}
+  \usepackage{amsthm}
+  \usepackage{amsfonts}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+  \usepackage{graphicx}
+  \usepackage{tikz,xcolor}
+  \usepackage{karnaugh-map}
+
+
+  \author{Hernández Ferreiro Enrique Ehécatl \\
+          López Soto Ramses Antonio}
+
+        \title{Práctica 3: Circuitos combinacionales \\
+                {\small Organización y Arquitectura de Computadoras}}
+
+                \date{24 de febrero de 2019}
+
+        \begin{document}
+        \maketitle
+        \section{Introducción}
+
+          \hspace{.5cm}
+          A lo largo de los años nos hemos preguntado cómo es que las computadoras
+          funcionan si no piensan, no razonan, sólo rlizan las series de instrucciones
+          que nosotros les indicamos. Esto se responde con la lógica proposicional.\vspace{.3cm}
+
+          Pero, ¿la lógica proposicional? En el año de 1854 un hombre llamado Geoge Boole
+          desarrolló el \textit{álgebra booleana} que abrió camino para el desarrollo de la 
+          \textit{lógica dígital}, con la cual nuestras computadoras funcionan.
+
+        \section{Desarrollo}
+
+          \hspace{.5cm}
+          Para el desarrollo de los circuitos se utilizó el software \textit{Logisim}. La primer
+          parte consistió en el desarrolo de la implicación lógica y la segunda en la construcción de un comparador
+          de dos bits.
+
+          \subsection{Implicación lógica}
+
+            \hspace{.5cm}
+            Para la construcción de la implicación lógica se ocuparon:
+
+            \begin{itemize}
+              \item 2 pines de entrada
+              \item 1 pin de salida
+              \item 3 transistores tipo PNP
+              \item 3 transitores tipo NPN
+            \end{itemize}
+
+          \subsection{Comparador}
+
+            \hspace{.5cm}
+            Para la construcción del comparador se uso lo siguiente:
+ 
+            \subsubsection{Fórmulas}
+                \hspace{.5cm}
+                El circuito funciona y se comporta como se muestra en la siguiente tabla, donde $A=A_0A_1$ y $B=B_0B_1$:
+                  \begin{table}[htbp]
+                    \centering
+                    \begin{tabular}{|c|c|c|c|c|c|c|}
+                    \hline
+                      \textbf{$A_0$} & \textbf{$A_1$} & \textbf{$B_0$} & \textbf{$B_1$} & \textbf{$A = B$} & \textbf{$A > B$} & \textbf{$A < B$} \\ \hline
+                      \textbf{0} & \textbf{0} & \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} & \textbf{0} \\ \hline
+                      \textbf{0} & \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{1} \\ \hline
+                      \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{0} & \textbf{1} \\ \hline
+                      \textbf{0} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} &\textbf{1} \\ \hline
+                      \textbf{0} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} \\ \hline
+                      \textbf{0} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} \\ \hline
+                      \textbf{0} & \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{0} & \textbf{1} \\ \hline
+                      \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{1} \\ \hline
+                      \textbf{1} & \textbf{0} & \textbf{0} & \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} \\ \hline
+                      \textbf{1} & \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{0} \\ \hline
+                      \textbf{1} & \textbf{0} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{0} & \textbf{0} \\ \hline
+                      \textbf{1} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{1} \\ \hline
+                      \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} \\ \hline
+                      \textbf{1} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{0} & \textbf{1} & \textbf{0} \\ \hline
+                      \textbf{1} & \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} & \textbf{1} & \textbf{0} \\ \hline
+                      \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{1} & \textbf{0} & \textbf{0} \\ \hline
+                    \end{tabular}
+                    \caption{Tabla de verdad del circuito}
+                  \end{table}\vspace{.1cm}
+
+                Usando la tabla de valores de verdad para los valores del bit A y B, sabemos
+                que los números serán: (00 = 0, 01 = 1, 10 = 2, 11 = 3) entonces podemos
+                establecer una relación entre A y B, en las celdas donde se cumpla la relación
+                tendremos un 1 y donde no un 0, entonces procederemos a formar una expresión
+                booleana.
+
+                Las espresiones booleanas en cada uno de los casos son:
+                \begin{itemize}
+                  \item $(A=B)=\overline{A_0}\overline{A_1}\overline{B_0}\overline{B_1}+
+                          \overline{A_0}A_1\overline{B_0}\overline{B_1}+A_0\overline{A_1}B_0\overline{B_1}
+                          +\overline{A_0}\overline{A_1}\overline{B_0}\overline{B_1}$
+                  \item $(A>B)=\overline{A_0}A_1\overline{B_0}\overline{B_1}+A_0\overline{A_1}\overline{B_0}\overline{B_1}
+                          +A_0\overline{A_1}\overline{B_0}B_1+A_0A_1\overline{B_0}\overline{B_1}+
+                          A_0A_1B_0\overline{B_1}$
+                  \item $(A<B)=\overline{A_0}\overline{A_1}\overline{B_0}B_1+\overline{A_0}\overline{A_1}B_0\overline{B_1}
+                          +\overline{A_0}\overline{A_1}B_0B_1+\overline{A_0}A_1B_0\overline{B_1}+
+                          \overline{A_0}A_1B_0B_1+A_0\overline{A_1}B_0B_1$ 
+                \end{itemize}
+
+              \subsubsection{Mapas de Karnaugh}
+
+                  Los mapas de karnaugh para minimizar las fórmulas son: \vspace{.6cm}
+
+                  \begin{itemize}
+                    \item $A=B$ \\
+                      \begin{karnaugh-map}*[4][4][1][$B_0B_1$][$A_0A_1$]
+                          \maxterms{1,2,3,4,6,7,8,9,11,12,13,14}
+                          \minterms{0,5,10,15}
+                          \autoterms[X]
+                          \implicant{0}{0}
+                          \implicant{5}{5}
+                          \implicant{10}{10}
+                          \implicant{15}{15}
+                      \end{karnaugh-map} \vspace{.3cm}
+
+                      Por lo que $(A=B)=\overline{A_0}\overline{A_1}\overline{B_0}\overline{B_1}+\overline{A_0}A_1\overline{B_0}B_1
+                      +A_0\overline{A_1}B_0\overline{B_1}+A_0A_1B_0B_1$
+
+                    \item $A>B$ \\
+                      \begin{karnaugh-map}*[4][4][1][$B_0B_1$][$A_0A_1$]
+                          \maxterms{0,1,2,3,5,6,7,10,11,15}
+                          \minterms{4,8,9,14,12,13}
+                          \autoterms[X]
+                          \implicant{4}{12}
+                          \implicant{12}{9}
+                          \implicantedge{12}{12}{14}{14}
+                      \end{karnaugh-map} \vspace{.1cm}
+
+                      Por lo que $(A>B)=A_1\overline{B_0}\overline{B_1}+A_0A_1\overline{B_1}$\vspace{.3cm}
+
+                    \item $A<B$\\
+                    \begin{karnaugh-map}*[4][4][1][$B_0B_1$][$A_0A_1$]
+                      \maxterms{0,4,12,8,5,13,9,15,14,10}
+                      \minterms{1,2,3,7,6,11}
+                      \autoterms[X]
+                      \implicant{1}{3}
+                      \implicant{3}{6}
+                      \implicantedge{3}{3}{11}{11}
+                    \end{karnaugh-map} \vspace{.1cm}
+
+                    Por lo que $(A<B)=\overline{A_0}\overline{A_1}B_1+\overline{A_0}B_0+\overline{A_1}B_0B_1$\vspace{.3cm}
+                        
+                  \end{itemize}
+          
+        \section{Conclusiones}
+            
+            \hspace{.5cm}
+            La construcción de circuitos dígitales es una tarea importante para quienes se dedican
+            a la fabricación de computadoras. A pesar que nosotros nos enfocamos más en el cómo nunca 
+            es malo saber un poco de cómo funcionan los componentes de nuestras computadoras.
+
+            En resumen, la práctica mos ayudó a entender un poco mejor el comprtamiento de algunos 
+            componentes de nuestras herramientas de trabajo.
+
+            \subsection{Preguntas}
+
+            \begin{itemize}
+              \item[1.] ¿Cuál es el procedimiento a seguir para desarrollar 
+                        un circuito que resuelva un problema que involucre 
+                        lógica combinacional?\vspace{.1cm}
+
+                        \textbf{R.} Hacer una tabla de verdad con todos lo 
+                        casos posibles, extraer aquellas combinaciones que 
+                        den el resultado deseado, juntar las expresiones y 
+                        reducir usando mapas de Karnaugh.\vspace{.1cm} 
+
+              \item[2.] Si una función de conmutación se evalúa a más ceros 
+                        que unos ¿es conveniente usar mintérminos o maxtérminos? 
+                        ¿En el caso que se evalué a más unos que ceros?\vspace{.1cm}
+
+                        \textbf{R.} Más ceros usamos mintérminos y para más unos 
+                        usamos maxtérminos.\vspace{.1cm}
+
+              \item[3.] Analizando el trabajo realizado, ¿cuáles son los inconvenientes 
+                        de desarrollar los circuitos de forma manual?\vspace{.1cm}
+
+                        \textbf{R.} Que muchas veces abstraes un funcionamiento mentalmente 
+                        pero resulta en fallas que no consideraste además de ser más complicado 
+                        y se causan cortos más fácilmente.\vspace{.1cm} 
+            \end{itemize}
+
+
+
+        \end{document}

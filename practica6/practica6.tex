@@ -1,0 +1,73 @@
+\documentclass[12pt, letterpaper]{article}
+  \usepackage[utf8]{inputenc}
+  \usepackage[left = 2.5cm, right = 2.5cm, top = 3cm, bottom = 3cm]{geometry}
+  \usepackage[T1]{fontenc}
+  \usepackage{graphicx}
+  \graphicspath{{images/}}
+  \usepackage{listings}
+
+  \author{Hernández Ferreiro Enrique Ehécatl \\
+          López Soto Ramses Antonio}
+
+        \title{Práctica 6: lenguaje ensamblador \\
+                {\small Organización y Arquitectura de Computadoras}}
+                \date{31 de marzo de 2019}
+
+  \begin{document}
+  \maketitle
+
+  \section{Introducción}
+  El \textbf{lenguaje ensamblador} es la aquella herramienta que nos brinda la representación simbólica de la codificación binaria de la computadora, es decir, en \textbf{lenguaje de máquina}.\vspace{.3cm}
+
+  El \textbf{ensamblador} el el encargado de traducir el lenguaje ensamblador a instrcciones binarias, el cual sólo lee un \textit{único} archivo fuente y produce un \textit{archivo objeto} que contiene instrucciones de máquina e información que ayuda a combinar varios objetos en un programa.\vspace{.3cm}
+
+  El lenguaje ensamblador toma dos papeles:
+  \begin{itemize}
+    \item Es el lenguaje de salida de los compiladores.
+    \item Es un lenguaje más con el cual es posible programar.
+  \end{itemize}
+
+  \section{Desarrollo}
+  La práctica consistió en desarrollar pequeños programas mediante el uso del software \textit{MARS} que nos presenta la arquitectura MIPS.\vspace{.3cm}
+
+  Se implemtaron 3 ejercicios que consitían en:
+  \begin{itemize}
+    \item Copiar el contenido de un registro a otro.
+    \item Obtener el máximo común divisor de dos números.
+    \item Obtener el cociente y residuo de una división.
+  \end{itemize}
+
+  Aqui podemos ver como copiar el contenido de un registro a otro:\vspace{.2cm}
+
+  \lstinputlisting{Ejercicio1P6.asm}\vspace{.3cm}
+
+  El máximo común divisor se muestra como sigue:\vspace{.2cm}
+
+  \lstinputlisting{Ejercicio2P6.asm}\vspace{.3cm}
+
+  Y, finalmente, el cociente y el residuo de una divisíon es:\vspace{.2cm}
+
+  \lstinputlisting{Ejercicio3P6.asm}\vspace{.3cm}
+
+  \section{Conclusión}
+    \subsection{Preguntas}
+
+    \begin{itemize}
+      \item[1.] ¿Existe alguna diferencia en escribir   programas en lenguaje ensamblador comparado con un lenguaje de alto nivel?\vspace{.2cm}
+
+      Los lenguajes de alto nivel se diseñaron con la finalidad de eliminar las cosas particulares de una computadora en específico, en cambio en el lenguaje ensamblador se diseño para una sola computadora en especifico o mas bien para un conjunto de microprocesadores.
+
+      \item[2.] ¿En qué caso es preferible escribir programas en lenguaje ensamblador y en qué casos en preferible hacerlo con un lenguaje de alto nivel?\vspace{.2cm}
+
+      \begin{itemize}
+        \item Para Lenguaje ensamblador: \\
+              Si se desea escribir un programa en el que se requiere que no se utilice mucha memoria y el tiempo de ejecución mucho menor, es mejor utilizar el lenguaje ensamblador.
+        \item Para lenguaje de alto nivel: \\
+              Si se desea programar de uan manera más cómoda y, además, depurar el código fácilmente, es mucho mejor utilizar los lenguajes de alto nivel.
+      \end{itemize}
+
+    \end{itemize}
+
+
+
+  \end{document}

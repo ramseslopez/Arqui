@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v8.6.0-->
+<PhoronixTestSuite>
+  <Generated>
+    <Title>gzip-compression</Title>
+    <LastModified>2019-02-09 15:21:58</LastModified>
+    <TestClient>Phoronix Test Suite v8.6.0 (Spydeberg)</TestClient>
+    <Description>Intel Celeron N3050 testing with a HP 82A9 v04.20 (F.10 BIOS) and Intel HD 400 2GB on Debian 9.5 via the Phoronix Test Suite.</Description>
+  </Generated>
+  <System>
+    <Identifier>gzip</Identifier>
+    <Hardware>Processor: Intel Celeron N3050 @ 2.16GHz (2 Cores), Motherboard: HP 82A9 v04.20 (F.10 BIOS), Chipset: Intel Atom/Celeron/Pentium, Memory: 4096MB, Disk: 31GB DF4032, Graphics: Intel HD 400 2GB (600MHz), Audio: Realtek ALC3227, Network: Intel 7265</Hardware>
+    <Software>OS: Debian 9.5, Kernel: 4.9.0-7-amd64 (x86_64), Desktop: GNOME Shell 3.22.3, Display Server: X Server 1.19.2, Display Driver: modesetting 1.19.2, OpenGL: 4.5 Mesa 13.0.6, Compiler: GCC 6.3.0 20170516, File-System: ext4, Screen Resolution: 1366x768</Software>
+    <User>ramses</User>
+    <TimeStamp>2019-02-09 15:15:03</TimeStamp>
+    <TestClientVersion>8.6.0</TestClientVersion>
+    <Notes></Notes>
+    <JSON>{"cpu-scaling-governor":"intel_pstate powersave","security":"KPTI + __user pointer sanitization + Full generic retpoline"}</JSON>
+  </System>
+  <Result>
+    <Identifier>pts/compress-gzip-1.2.0</Identifier>
+    <Title>Gzip Compression</Title>
+    <AppVersion></AppVersion>
+    <Arguments></Arguments>
+    <Description>Linux Source Tree Archiving To .tar.gz</Description>
+    <Scale>Seconds</Scale>
+    <Proportion>LIB</Proportion>
+    <DisplayFormat>BAR_GRAPH</DisplayFormat>
+    <Data>
+      <Entry>
+        <Identifier>gzip</Identifier>
+        <Value>112.39</Value>
+        <RawString>115.51129508018:111.11337614059:110.53457903862</RawString>
+        <JSON>{"test-run-times":"115.51:111.11:110.53"}</JSON>
+      </Entry>
+    </Data>
+  </Result>
+</PhoronixTestSuite>
